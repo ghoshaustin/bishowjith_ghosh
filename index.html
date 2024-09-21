@@ -35,7 +35,7 @@
             white-space: nowrap; /* Ensures that Data Analyst Portfolio stays on one line */
         }
 
-        /* Menu styles */
+        /* Menu styles (for desktop and larger screens) */
         nav {
             background-color: #34495E;
             color: white;
@@ -146,6 +146,21 @@
 
         /* Media queries for responsiveness */
         @media (max-width: 768px) {
+            /* Adjustments for mobile view */
+            nav ul {
+                justify-content: space-between; /* Ensure all menu items are spaced evenly */
+                flex-wrap: nowrap; /* Prevent the menu from wrapping */
+            }
+
+            nav ul li {
+                margin: 0 10px; /* Smaller margin for mobile */
+            }
+
+            nav ul li a {
+                font-size: 0.8em; /* Smaller font size for mobile */
+                padding: 5px 10px; /* Reduce padding for mobile */
+            }
+
             .projects-container {
                 flex-direction: column;
                 align-items: center;
@@ -153,10 +168,6 @@
 
             .project-box {
                 width: 80%;
-            }
-
-            nav ul {
-                flex-direction: column;
             }
 
             section {
@@ -178,52 +189,44 @@
         }
 
         @media (max-width: 480px) {
+            /* Further adjustments for smaller mobile devices */
             header h1 {
-                font-size: 2em; /* Keep Bishowjith Ghosh slightly larger */
+                font-size: 2em; /* Slightly smaller heading size */
             }
 
             .portfolio-title {
-                font-size: 1.2em; /* Reduce Data Analyst Portfolio for mobile */
-                white-space: nowrap; /* Keep Data Analyst Portfolio on one line */
+                font-size: 1.2em; /* Reduced size for Data Analyst Portfolio */
+                white-space: nowrap; /* Ensure it stays in one line */
             }
 
-            nav ul {
-                padding: 0;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
-
-            .project-box {
-                width: 90%;
-            }
-
-            .contact-info a {
-                display: block;
-                margin: 10px 0;
+            nav ul li a {
+                font-size: 0.75em; /* Further reduced font size for smaller screens */
             }
         }
     </style>
     <script>
-        // Scroll Fix for Mobile Menu
+        // Scroll Fix for Mobile Menu (applies only to mobile)
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav ul li a');
-            const offset = 70; // Adjust this value for how much offset you want (height of the menu)
+            const isMobile = window.innerWidth <= 768; // Detect if it's a mobile device
+            
+            if (isMobile) {
+                const offset = 70; // Adjust this value for how much offset you want (height of the menu)
+                
+                links.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        const scrollPosition = targetElement.offsetTop - offset;
 
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    const scrollPosition = targetElement.offsetTop - offset;
-
-                    window.scrollTo({
-                        top: scrollPosition,
-                        behavior: 'smooth'
+                        window.scrollTo({
+                            top: scrollPosition,
+                            behavior: 'smooth'
+                        });
                     });
                 });
-            });
+            }
         });
     </script>
 </head>
@@ -231,7 +234,7 @@
     <!-- Header -->
     <header>
         <h1>Bishowjith Ghosh</h1>
-        <h2 class="portfolio-title">Data Analyst - Portfolio</h2> <!-- Reduced size for mobile -->
+        <h2 class="portfolio-title">Data Analyst - Portfolio</h2> <!-- Adjusted size for mobile -->
     </header>
 
     <!-- Navigation -->
