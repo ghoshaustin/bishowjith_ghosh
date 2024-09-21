@@ -5,129 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bishowjith Ghosh - Data Analyst Portfolio</title>
     <style>
-        /* General Style */
+        /* General Styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
+            background-color: #f8f9fa;
             color: #333;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1abc9c, #16a085);
+            background-color: #007bff;
             color: white;
-            padding: 40px 0;
+            padding: 30px 0;
             text-align: center;
-            position: relative;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
         }
         header h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-size: 2.5rem;
             margin: 0;
         }
-        header p {
-            font-size: 1.5rem;
+        header nav {
             margin-top: 10px;
         }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #2c3e50;
-            padding: 10px;
-        }
-        nav a {
+        header nav a {
             color: white;
             margin: 0 15px;
             font-size: 1.2rem;
             text-decoration: none;
-            font-weight: bold;
         }
-        nav a:hover {
+        header nav a:hover {
             text-decoration: underline;
         }
 
-        /* Main Section */
+        /* About Me Section */
         .container {
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 30px auto;
+            padding: 20px;
         }
-
-        /* About Section */
         .about {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
+            background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .about-text {
-            width: 60%;
+        .about h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
-        .about-text h2 {
-            font-size: 2.5rem;
-            color: #16a085;
-        }
-        .about-text p {
+        .about p {
             font-size: 1.2rem;
             line-height: 1.6;
         }
 
-        /* Skills Section */
-        .skills-section {
+        /* Projects Section */
+        .projects {
+            margin-top: 40px;
+        }
+        .projects h2 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+        .project-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+        }
+        .project-card h3 {
+            color: #007bff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        .project-card a {
+            font-size: 1rem;
+            color: #28a745;
+            text-decoration: none;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills Section */
+        .skills {
             margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
         }
         .skill-card {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         .skill-card h3 {
-            color: #3498db;
             font-size: 1.5rem;
+            color: #007bff;
+        }
+        .skill-card p {
+            font-size: 1rem;
         }
 
-        /* Projects Section */
-        .projects {
-            margin-top: 60px;
-        }
-        .project {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Contact Section */
+        .contact {
             text-align: center;
+            margin-top: 60px;
+            background-color: #f1f3f5;
+            padding: 30px;
+            border-radius: 10px;
         }
-        .project h3 {
-            font-size: 1.8rem;
-            color: #16a085;
-        }
-        .project a {
-            margin-top: 10px;
-            display: inline-block;
-            text-decoration: none;
+        .contact p {
             font-size: 1.2rem;
-            color: #1abc9c;
+            margin-bottom: 20px;
         }
-        .project a:hover {
+        .contact a {
+            font-size: 1.2rem;
+            color: #28a745;
+            text-decoration: none;
+        }
+        .contact a:hover {
             text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            background-color: #2c3e50;
+            background-color: #343a40;
             color: white;
             text-align: center;
             padding: 20px;
@@ -139,18 +156,15 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .about {
-                flex-direction: column;
-            }
-            .about-text {
-                width: 100%;
-            }
-            .skills-section {
+            .skills {
                 flex-direction: column;
             }
             .skill-card {
                 width: 100%;
                 margin-bottom: 20px;
+            }
+            .project-card {
+                flex-direction: column;
             }
         }
     </style>
@@ -158,35 +172,56 @@
 <body>
 
 <header>
-    <h1>Bishowjith Ghosh</h1>
-    <p>Data Analyst | Python, MySQL, Tableau Expert</p>
+    <h1>Bishowjith Ghosh - Data Analyst Portfolio</h1>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
 <div class="container">
-    <!-- About Section -->
+    <!-- About Me Section -->
     <section id="about" class="about">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with over 5 years of experience in data-related roles. I specialize in using Tableau, Python, and MySQL to analyze large datasets and create interactive dashboards. Currently pursuing my Master's in Data Science, I have experience in Banking, E-commerce, and Retail sectors, transforming raw data into actionable insights.</p>
+        <h2>About Me</h2>
+        <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <div>
+                <h3>Domain: Banking</h3>
+                <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
+                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div>
+                <h3>Domain: E-commerce</h3>
+                <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
+                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div>
+                <h3>Domain: Retail</h3>
+                <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
+                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail">View Project</a>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <section class="skills">
         <div class="skill-card">
             <h3>Data Analysis</h3>
-            <p>Data Mining, Cleaning, EDA</p>
+            <p>Data Cleaning, Exploratory Data Analysis, Process Automation</p>
         </div>
         <div class="skill-card">
             <h3>Data Visualization</h3>
-            <p>Tableau (Dashboards), Reporting</p>
+            <p>Tableau (Dashboards), Reporting, Storytelling with Data</p>
         </div>
         <div class="skill-card">
             <h3>Technical Skills</h3>
@@ -194,30 +229,15 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2 style="text-align: center; color: #3498db;">Projects</h2>
-        <div class="project">
-            <h3>Bank Customer Analysis</h3>
-            <p>Developed Tableau dashboards to analyze customer behavior using the UK Bank Dataset.</p>
-            <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking">View Project</a>
-        </div>
-        <div class="project">
-            <h3>E-commerce Customer Segmentation</h3>
-            <p>Analyzed customer behavior, sales trends, and segmentation using the Amazing Mart Dataset.</p>
-            <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce">View Project</a>
-        </div>
-        <div class="project">
-            <h3>Retail Sales Performance</h3>
-            <p>Developed Tableau dashboards to track sales performance across regions and categories.</p>
-            <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail">View Project</a>
-        </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <p>If you would like to connect or learn more about my work, feel free to reach out via email or LinkedIn.</p>
+        <a href="mailto:ghosh.texas@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a>
     </section>
 </div>
 
 <!-- Footer -->
-<footer id="contact">
-    <p>Contact Me: <a href="mailto:ghosh.texas@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> | <a href="https://github.com/ghoshaustin">GitHub</a></p>
+<footer>
     <p>&copy; 2024 Bishowjith Ghosh - All Rights Reserved</p>
 </footer>
 
