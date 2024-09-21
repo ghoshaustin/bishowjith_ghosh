@@ -9,84 +9,172 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
+            background-color: #f4f7f9;
             color: #333;
         }
         header {
-            background-color: #2c3e50;
+            background-color: #1abc9c;
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #1abc9c;
+            background-color: #16a085;
             padding: 10px;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
-        h2 {
-            color: #2980b9;
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .projects {
+        .profile-section {
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .project {
+            flex-direction: column;
+            align-items: center;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 30%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
-        .project h3 {
-            margin-top: 0;
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .skills-section, .projects-section, .contact-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .skills-list, .projects-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .skill, .project {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
         }
         .project a {
+            display: block;
+            margin-top: 10px;
             color: #1abc9c;
             text-decoration: none;
+            font-weight: bold;
         }
         .project a:hover {
             text-decoration: underline;
         }
         footer {
-            background-color: #2c3e50;
+            background-color: #16a085;
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
             width: 100%;
-            bottom: 0;
+            position: relative;
         }
-        .contact {
-            margin-top: 30px;
-            text-align: center;
+        footer p {
+            margin: 0;
         }
-        .contact a {
+        .contact-links a {
             color: #1abc9c;
             text-decoration: none;
             font-size: 1.2rem;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media only screen and (min-width: 600px) {
+            .profile-section {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .profile-pic {
+                width: 180px;
+                height: 180px;
+                margin-right: 30px;
+            }
+            .skills-list, .projects-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .skill, .project {
+                max-width: 30%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            h1 {
+                font-size: 4rem;
+            }
+            nav {
+                padding: 15px;
+            }
+            nav a {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+            .skill, .project {
+                max-width: 25%;
+            }
         }
     </style>
 </head>
@@ -98,53 +186,67 @@
 
 <nav>
     <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL.</p>
+    <section id="about" class="profile-section">
+        <img src="path_to_image/your_picture.jpg" alt="Bishowjith Ghosh" class="profile-pic">
+        <div>
+            <h2>About Me</h2>
+            <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with over 5 years of experience in data-related roles. I'm passionate about leveraging data to drive business decisions. I specialize in using Tableau, Python, and MySQL to analyze large datasets and create interactive dashboards.</p>
+            <p>Currently pursuing my Master's in Data Science, I have experience across multiple industries including Banking, E-commerce, and Retail. I thrive on transforming raw data into actionable insights.</p>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects">
-            <!-- Banking Project -->
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <h3>Data Analysis</h3>
+                <p>Data Mining, Cleaning, EDA</p>
+            </div>
+            <div class="skill">
+                <h3>Data Visualization</h3>
+                <p>Tableau (Dashboards), Reporting</p>
+            </div>
+            <div class="skill">
+                <h3>Technical Skills</h3>
+                <p>Python, Pandas, MySQL, Seaborn, GitHub</p>
+            </div>
+            <div class="skill">
+                <h3>Office Tools</h3>
+                <p>MS Office, Adobe Photoshop</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="projects-list">
             <div class="project">
-                <h3>Domain: Banking</h3>
-                <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
+                <h3>Bank Customer Analysis</h3>
+                <p>Developed Tableau dashboards to analyze customer behavior using the UK Bank Dataset.</p>
                 <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking">View Project</a>
             </div>
-
-            <!-- E-commerce Project -->
             <div class="project">
-                <h3>Domain: E-commerce</h3>
-                <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
+                <h3>E-commerce Customer Segmentation</h3>
+                <p>Analyzed customer behavior, sales trends, and segmentation using the Amazing Mart Dataset.</p>
                 <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce">View Project</a>
             </div>
-
-            <!-- Retail Project -->
             <div class="project">
-                <h3>Domain: Retail</h3>
-                <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
+                <h3>Retail Sales Performance</h3>
+                <p>Developed Tableau dashboards to track sales performance across regions and categories.</p>
                 <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail">View Project</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <h2>Contact Me</h2>
-        <p>If you would like to connect or learn more about my work, feel free to reach out via email or LinkedIn.</p>
-        <a href="mailto:ghosh.texas@gmail.com">Email Me</a> |
-        <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2024 Bishowjith Ghosh - All Rights Reserved</p>
-</footer>
-
-</body>
-</html>
+        <p>If you'd like to connect or learn more about my work, feel free to reach out:</p>
+        <div class="contact-links">
+            <p><a href="mailto:ghosh.texas@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> | <a href="https://github.com/ghoshaustin">GitHub</a></p>
+        </
