@@ -1,1 +1,35 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.sticky-nav {
+  background-color: #2EB857;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.sticky-nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.sticky-nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.sticky-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sticky-nav ul li a:hover {
+  text-decoration: underline;
+}
 
