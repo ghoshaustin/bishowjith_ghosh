@@ -24,6 +24,17 @@
             padding: 20px;
         }
 
+        header h1 {
+            font-size: 2.5em; /* Default heading size for Bishowjith Ghosh */
+            margin: 0;
+        }
+
+        .portfolio-title {
+            font-size: 1.5em; /* Smaller size for Data Analyst Portfolio */
+            margin: 0;
+            white-space: nowrap; /* Ensures that Data Analyst Portfolio stays on one line */
+        }
+
         /* Menu styles */
         nav {
             background-color: #34495E;
@@ -167,12 +178,13 @@
         }
 
         @media (max-width: 480px) {
-            header {
-                font-size: 1.5em;
+            header h1 {
+                font-size: 2em; /* Keep Bishowjith Ghosh slightly larger */
             }
 
-            h1 {
-                font-size: 1.8em; /* Adjusted heading size for mobile */
+            .portfolio-title {
+                font-size: 1.2em; /* Reduce Data Analyst Portfolio for mobile */
+                white-space: nowrap; /* Keep Data Analyst Portfolio on one line */
             }
 
             nav ul {
@@ -218,7 +230,8 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Bishowjith Ghosh - Data Analyst Portfolio</h1>
+        <h1>Bishowjith Ghosh</h1>
+        <h2 class="portfolio-title">Data Analyst - Portfolio</h2> <!-- Reduced size for mobile -->
     </header>
 
     <!-- Navigation -->
@@ -282,3 +295,33 @@
     <!-- Education & Certifications Section -->
     <section id="education">
         <div class="section-title">Education & Certifications</div>
+        <ul style="list-style-type: none;">
+            <li><strong>Education:</strong> M.S. in Data Science, Birchwood University (Graduating December 2024)</li>
+            <li>B.S. in Chemistry, National University (2013)</li>
+            <li><strong>Certifications & Professional Development:</strong></li>
+            <li>CompTIA IT Fundamentals, austinfree.net, Austin, Texas — March 19, 2018</li>
+            <li>CompTIA A+ Complete Study Guide (Course & Labs), The Goodwill Academy — May 7, 2018</li>
+            <li>Diploma in Computer Science & ICT, SIT Foundation, Bangladesh — December 2010</li>
+            <li>Software Testing and Automation Course, NextTech ITC, Irving, TX — 2021</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title">Contact Me</div>
+        <p>
+            If you would like to connect or learn more about my work, feel free to reach out via email, GitHub, or LinkedIn.
+        </p>
+        <div class="contact-info">
+            <a href="mailto:ghosh.texas@gmail.com">Email Me</a> |
+            <a href="https://linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> |
+            <a href="https://github.com/ghoshaustin">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Bishowjith Ghosh - All Rights Reserved
+    </footer>
+</body>
+</html>
