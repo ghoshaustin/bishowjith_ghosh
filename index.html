@@ -1,13 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishowjith Ghosh - Portfolio</title>
+    <title>Bishowjith Ghosh - Data Analyst Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1abc9c;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .project {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        .project a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Bishowjith Ghosh's Portfolio</h1>
-    <p>This is my personal website where I showcase my projects.</p>
+
+<header>
+    <h1>Bishowjith Ghosh - Data Analyst Portfolio</h1>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <!-- Banking Project -->
+            <div class="project">
+                <h3>Domain: Banking</h3>
+                <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
+                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking">View Project</a>
+            </div>
+
+            <!-- E-commerce Project -->
+            <div class="project">
+                <h3>Domain: E-commerce</h3>
+                <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
+                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce">View Project</a>
+            </div>
+
+            <!-- Retail Project -->
+            <div class="project">
+                <h3>Domain: Retail</h3>
+                <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
+                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to connect or learn more about my work, feel free to reach out via email or LinkedIn.</p>
+        <a href="mailto:ghosh.texas@gmail.com">Email Me</a> |
+        <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Bishowjith Ghosh - All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
