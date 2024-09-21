@@ -1,184 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishowjith Ghosh - Data Analyst Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #F4F4F4;
-            margin: 0;
-            padding: 0;
-        }
-        /* Sticky Navigation */
-        nav {
-            background-color: #2E8B57;
-            padding: 10px 0;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            color: #66CDAA;
-            text-decoration: underline;
-        }
-        /* Header */
-        header {
-            text-align: center;
-            background-color: #2E8B57;
-            color: white;
-            padding: 20px;
-        }
-        /* Section styles */
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #2E8B57;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        h2 {
-            font-size: 28px;
-        }
-        h3 {
-            font-size: 24px;
-        }
-        /* Project box */
-        .project-box {
-            background-color: white;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .project-box:hover {
-            transform: scale(1.05);
-        }
-        .project-box a {
-            color: #2E8B57;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project-box a:hover {
-            color: #66CDAA;
-        }
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishowjith Ghosh - Data Analyst Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    /* Header */
+    .header {
+      text-align: center;
+      background-color: #2E8B57;
+      color: white;
+      padding: 10px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    /* Navigation */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .navbar ul {
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+    .navbar ul li {
+      display: inline-block;
+      padding: 15px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .navbar ul li a:hover {
+      color: #2E8B57;
+    }
+    /* Content Section */
+    .section {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Sticky Navigation -->
-<nav>
+  <!-- Header with Name -->
+  <header class="header">
+    Bishowjith Ghosh - Data Analyst Portfolio
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar">
     <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-</nav>
+  </nav>
 
-<!-- Header -->
-<header>
-    <h1>Bishowjith Ghosh - Data Analyst Portfolio</h1>
-</header>
-
-<!-- About Me Section -->
-<section id="about">
+  <!-- About Me Section -->
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. 
-    I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, 
-    including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL.</p>
-</section>
+    <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL. Currently pursuing a Master of Science in Data Science, with expected graduation in December 2024.</p>
+  </section>
 
-<!-- Projects Section -->
-<section id="projects">
+  <!-- Projects Section -->
+  <section id="projects" class="section">
     <h2>My Projects</h2>
-    <div class="project-box">
-        <h3>Domain: Banking</h3>
-        <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
-        <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking">View Project</a>
+    <div class="project">
+      <h3>Domain: Banking</h3>
+      <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
+      <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking" target="_blank">View Project</a>
     </div>
-    <div class="project-box">
-        <h3>Domain: E-commerce</h3>
-        <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
-        <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce">View Project</a>
+    <div class="project">
+      <h3>Domain: E-commerce</h3>
+      <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
+      <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce" target="_blank">View Project</a>
     </div>
-    <div class="project-box">
-        <h3>Domain: Retail</h3>
-        <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
-        <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail">View Project</a>
+    <div class="project">
+      <h3>Domain: Retail</h3>
+      <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
+      <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail" target="_blank">View Project</a>
     </div>
-</section>
+  </section>
 
-<!-- Skills Section -->
-<section id="skills">
+  <!-- Skills Section -->
+  <section id="skills" class="section">
     <h2>Skills</h2>
     <ul>
-        <li><strong>Data Analysis:</strong> Data Mining, Data Cleaning, Exploratory Data Analysis (EDA)</li>
-        <li><strong>Data Visualization:</strong> Tableau (Dashboards, Storytelling), Reporting</li>
-        <li><strong>Technical Skills:</strong> Python, Pandas, MySQL, Seaborn, NumPy, GitHub, Jupyter Notebook, Colab, HTML, CSS</li>
-        <li><strong>Machine Learning:</strong> Concepts of ML, Scikit-Learn, Flask for ML deployment</li>
-        <li><strong>Office Tools:</strong> MS Office, Photoshop</li>
+      <li>Data Analysis: Data Mining, Data Cleaning, Exploratory Data Analysis (EDA)</li>
+      <li>Data Visualization: Tableau (Dashboards, Storytelling), Reporting</li>
+      <li>Technical Skills: Python, Pandas, MySQL, Seaborn, NumPy, GitHub, Jupyter Notebook, Colab, HTML, CSS</li>
+      <li>Office Tools: MS Office, Photoshop</li>
     </ul>
-</section>
+  </section>
 
-<!-- Education Section -->
-<section id="education">
+  <!-- Education Section -->
+  <section id="education" class="section">
     <h2>Education & Certifications</h2>
     <ul>
-        <li><strong>M.S. in Data Science:</strong> Birchwood University (Graduating December 2024)</li>
-        <li><strong>B.S. in Chemistry:</strong> National University (2013)</li>
-        <li><strong>CompTIA IT Fundamentals:</strong> austinfree.net, Austin, Texas — March 19, 2018</li>
-        <li><strong>CompTIA A+ Complete Study Guide:</strong> The Goodwill Academy — May 7, 2018</li>
-        <li><strong>Diploma in Computer Science & ICT:</strong> SIT Foundation, Bangladesh — December 2010</li>
-        <li><strong>Software Testing and Automation Course:</strong> NextTech ITC, Irving, TX — 2021</li>
+      <li>M.S. in Data Science, Birchwood University (Graduating December 2024)</li>
+      <li>B.S. in Chemistry, National University (2013)</li>
+      <li>CompTIA IT Fundamentals, austinfree.net, Austin, Texas — March 19, 2018</li>
+      <li>CompTIA A+ Complete Study Guide (Course & Labs), The Goodwill Academy — May 7, 2018</li>
+      <li>Diploma in Computer Science & ICT, SIT Foundation, Bangladesh — December 2010</li>
+      <li>Software Testing and Automation Course, NextTech ITC, Irving, TX — 2021</li>
     </ul>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="section">
     <h2>Contact Me</h2>
     <p>If you would like to connect or learn more about my work, feel free to reach out via email, GitHub, or LinkedIn.</p>
-    <p><a href="mailto:ghosh.texas@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> | <a href="https://github.com/ghoshaustin">GitHub</a></p>
-</section>
+    <a href="mailto:ghosh.texas@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b" target="_blank">LinkedIn</a> | <a href="https://github.com/ghoshaustin" target="_blank">GitHub</a>
+  </section>
 
-<!-- Footer -->
-<footer>
-    <p>© 2024 Bishowjith Ghosh - All Rights Reserved</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    © 2024 Bishowjith Ghosh - All Rights Reserved
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishowjith Ghosh - Data Analyst Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    /* Header */
+    .header {
+      text-align: center;
+      background-color: #2E8B57;
+      color: white;
+      padding: 10px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    /* Navigation */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .navbar ul {
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+    .navbar ul li {
+      display: inline-block;
+      padding: 15px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .navbar ul li a:hover {
+      color: #2E8B57;
+    }
+    /* Content Section */
+    .section {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Name -->
+  <header class="header">
+    Bishowjith Ghosh - Data Analyst Portfolio
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL. Currently pursuing a Master of Science in Data Science, with expected graduation in December 2024.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Domain: Banking</h3>
+      <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
+      <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking" target="_blank">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Domain: E-commerce</h3>
+      <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
+      <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce" target="_blank">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Domain: Retail</h3>
+      <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
+      <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Data Analysis: Data Mining, Data Cleaning, Exploratory Data Analysis (EDA)</li>
+      <li>Data Visualization: Tableau (Dashboards, Storytelling), Reporting</li>
+      <li>Technical Skills: Python, Pandas, MySQL, Seaborn, NumPy, GitHub, Jupyter Notebook, Colab, HTML, CSS</li>
+      <li>Office Tools: MS Office, Photoshop</li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li>M.S. in Data Science, Birchwood University (Graduating December 2024)</li>
+      <li>B.S. in Chemistry, National University (2013)</li>
+      <li>CompTIA IT Fundamentals, austinfree.net, Austin, Texas — March 19, 2018</li>
+      <li>CompTIA A+ Complete Study Guide (Course & Labs), The Goodwill Academy — May 7, 2018</li>
+      <li>Diploma in Computer Science & ICT, SIT Foundation, Bangladesh — December 2010</li>
+      <li>Software Testing and Automation Course, NextTech ITC, Irving, TX — 2021</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>If you would like to connect or learn more about my work, feel free to reach out via email, GitHub, or LinkedIn.</p>
+    <a href="mailto:ghosh.texas@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b" target="_blank">LinkedIn</a> | <a href="https://github.com/ghoshaustin" target="_blank">GitHub</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2024 Bishowjith Ghosh - All Rights Reserved
+  </footer>
 
 </body>
 </html>
