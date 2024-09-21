@@ -55,7 +55,7 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px; /* Default margin for desktop view */
         }
 
         nav ul li a {
@@ -148,18 +148,18 @@
         @media (max-width: 768px) {
             /* Adjustments for mobile view */
             nav ul {
-                justify-content: space-between; /* Space between for balance */
+                justify-content: center; /* Center items for mobile */
                 flex-wrap: nowrap; /* Ensure no wrapping */
                 overflow: hidden; /* Prevent overflow to the right */
             }
 
             nav ul li {
-                margin: 0 8px; /* Reduced margin for mobile menu options */
+                margin: 0 5px; /* Reduced margin for mobile menu options */
             }
 
             nav ul li a {
                 font-size: 0.9em; /* Slightly smaller font size */
-                padding: 5px 8px; /* Reduce padding */
+                padding: 5px 10px; /* Slightly reduced padding for mobile */
             }
 
             .projects-container {
