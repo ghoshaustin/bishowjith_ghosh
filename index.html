@@ -192,12 +192,28 @@
                 margin: 10px 0;
             }
         }
-
-        /* Scroll fix for menu */
-        section {
-            scroll-margin-top: 80px; /* Adjust scroll position so content begins at the top */
-        }
     </style>
+    <script>
+        // Scroll Fix for Mobile Menu
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('nav ul li a');
+            const offset = 70; // Adjust this value for how much offset you want (height of the menu)
+
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const scrollPosition = targetElement.offsetTop - offset;
+
+                    window.scrollTo({
+                        top: scrollPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -266,33 +282,3 @@
     <!-- Education & Certifications Section -->
     <section id="education">
         <div class="section-title">Education & Certifications</div>
-        <ul style="list-style-type: none;">
-            <li><strong>Education:</strong> M.S. in Data Science, Birchwood University (Graduating December 2024)</li>
-            <li>B.S. in Chemistry, National University (2013)</li>
-            <li><strong>Certifications & Professional Development:</strong></li>
-            <li>CompTIA IT Fundamentals, austinfree.net, Austin, Texas — March 19, 2018</li>
-            <li>CompTIA A+ Complete Study Guide (Course & Labs), The Goodwill Academy — May 7, 2018</li>
-            <li>Diploma in Computer Science & ICT, SIT Foundation, Bangladesh — December 2010</li>
-            <li>Software Testing and Automation Course, NextTech ITC, Irving, TX — 2021</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="section-title">Contact Me</div>
-        <p>
-            If you would like to connect or learn more about my work, feel free to reach out via email, GitHub, or LinkedIn.
-        </p>
-        <div class="contact-info">
-            <a href="mailto:ghosh.texas@gmail.com">Email Me</a> |
-            <a href="https://linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> |
-            <a href="https://github.com/ghoshaustin">GitHub</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Bishowjith Ghosh - All Rights Reserved
-    </footer>
-</body>
-</html>
