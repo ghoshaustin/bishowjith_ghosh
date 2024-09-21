@@ -1,111 +1,74 @@
-/* General styles */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bishowjith Ghosh - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-/* Sticky Navigation */
-.sticky-nav {
-    background-color: #2E8B57;
-    padding: 10px 0;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <!-- About Me Section -->
+    <header id="about">
+        <h1>Bishowjith Ghosh - Data Analyst Portfolio</h1>
+        <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization.</p>
+    </header>
 
-.sticky-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Domain: Banking</h3>
+                <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Domain: E-commerce</h3>
+                <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Domain: Retail</h3>
+                <p>Investigated consumer purchasing patterns and stock management in the retail industry.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
 
-.sticky-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Data Analysis</h3>
+                <p>Data Mining, Data Cleaning, Exploratory Data Analysis (EDA)</p>
+            </div>
+            <div class="skill-box">
+                <h3>Data Visualization</h3>
+                <p>Tableau (Dashboards, Storytelling), Reporting</p>
+            </div>
+            <div class="skill-box">
+                <h3>Technical Skills</h3>
+                <p>Python, Pandas, MySQL, Seaborn, NumPy, GitHub, Jupyter Notebook</p>
+            </div>
+        </div>
+    </section>
 
-.sticky-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.sticky-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
-header h1 {
-    text-align: center;
-    background-color: #2E8B57;
-    color: white;
-    padding: 20px;
-}
-
-/* Section styles */
-section {
-    padding: 20px;
-    margin: 20px 0;
-}
-
-#projects .project {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#projects .project a {
-    color: #2E8B57;
-    font-weight: bold;
-}
-
-#skills {
-    background-color: #f0f8ff;
-    padding: 20px;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.skill-box {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 10px;
-    flex-basis: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.skill-box:hover {
-    background-color: #2E8B57;
-    color: white;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-/* Footer */
-#contact {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-#contact a {
-    color: #2E8B57;
-}
-
-#contact a:hover {
-    color: #66CDAA;
-    text-decoration: none;
-}
+    <!-- Contact Section -->
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to connect, feel free to reach out via <a href="mailto:ghosh.texas@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> | <a href="https://github.com/ghoshaustin">GitHub</a></p>
+    </footer>
+</body>
+</html>
