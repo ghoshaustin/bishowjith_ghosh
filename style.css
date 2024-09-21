@@ -10,8 +10,9 @@ body {
 
 /* Sticky Navigation */
 .sticky-nav {
-    background-color: #2EBB57;
+    background-color: #2EB857;
     padding: 10px 0;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,7 +41,7 @@ body {
 /* Header */
 header h1 {
     text-align: center;
-    background-color: #2EBB57;
+    background-color: #2EB857;
     color: white;
     padding: 20px;
 }
@@ -48,42 +49,76 @@ header h1 {
 /* Section styles */
 section {
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
-.projects-container, .skills-container {
+#projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 28%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card a {
+    color: #2EB857;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.skills-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.project, .skill-box {
+.skill-box {
     background-color: white;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    flex-basis: 30%;
     margin-bottom: 10px;
-    transition: transform 0.3s;
-}
-
-.project:hover, .skill-box:hover {
-    transform: scale(1.05);
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
-#contact {
+footer {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-#contact a {
-    color: #2EBB57;
+/* Contact */
+#contact-a {
+    color: #2EB857;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-#contact a:hover {
+#contact-a:hover {
     color: #66CDAA;
     text-decoration: none;
 }
