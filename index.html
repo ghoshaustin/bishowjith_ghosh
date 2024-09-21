@@ -148,13 +148,13 @@
         @media (max-width: 768px) {
             /* Adjustments for mobile view */
             nav ul {
-                justify-content: space-around; /* Make sure menu items are evenly distributed */
+                justify-content: space-between; /* Space between for balance */
                 flex-wrap: nowrap; /* Ensure no wrapping */
                 overflow: hidden; /* Prevent overflow to the right */
             }
 
             nav ul li {
-                margin: 0 5px; /* Slightly reduce margin to fit items better */
+                margin: 0 8px; /* Reduced margin for mobile menu options */
             }
 
             nav ul li a {
@@ -243,10 +243,10 @@
     <nav>
         <ul>
             <li><a href="#profile">Profile</a></li> <!-- Changed "About Me" to "Profile" -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li> <!-- Skills comes after Profile -->
+            <li><a href="#projects">Projects</a></li> <!-- Projects after Skills -->
+            <li><a href="#education">Education</a></li> <!-- Education after Projects -->
+            <li><a href="#contact">Contact</a></li> <!-- Contact last -->
         </ul>
     </nav>
 
