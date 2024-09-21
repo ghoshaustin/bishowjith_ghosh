@@ -37,10 +37,9 @@
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 0 auto;
+            margin: 0;
             display: flex;
             justify-content: center;
-            text-align: center;
         }
 
         nav ul li {
@@ -66,7 +65,6 @@
         section {
             padding: 20px;
             margin: 20px 0;
-            text-align: center; /* Centers all text */
         }
 
         .section-title {
@@ -79,19 +77,11 @@
             font-size: 1.4em;
         }
 
-        /* Text alignment fix */
-        p, ul {
-            text-align: center; /* Ensures text starts from the center */
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%; /* Adjust width as necessary */
-        }
-
-        .education-certifications {
+        /* About and content section */
+        .content {
             text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
+            margin: 0 auto;
+            max-width: 700px;
         }
 
         /* Project section */
@@ -99,6 +89,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            text-align: center;
         }
 
         .project-box {
@@ -126,7 +117,17 @@
             text-decoration: underline;
         }
 
-        /* Contact styles */
+        /* Skills section */
+        .skills-content {
+            text-align: center;
+        }
+
+        .skills-content strong {
+            display: block;
+            margin-top: 15px;
+        }
+
+        /* Contact section */
         .contact-info {
             text-align: center;
             margin: 20px 0;
@@ -142,6 +143,7 @@
             color: #66CDAA;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             background-color: #34495E;
@@ -164,7 +166,6 @@
                 flex-direction: column;
             }
         }
-
     </style>
 </head>
 <body>
@@ -187,7 +188,20 @@
     <!-- About Section -->
     <section id="about">
         <div class="section-title">About Me</div>
-        <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, and MySQL. Currently pursuing a Master of Science in Data Science, with expected graduation in December 2024.</p>
+        <div class="content">
+            <p>Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, visualization, and process optimization. I am passionate about turning raw data into actionable insights that drive business growth. I have worked across multiple domains, including Banking, E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, MySQL & ML. Currently pursuing a Master of Science in Data Science, with expected graduation in December 2024.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-title">Skills</div>
+        <div class="skills-content">
+            <strong>Data Analysis:</strong> Data Mining, Data Cleaning, Exploratory Data Analysis (EDA)<br>
+            <strong>Data Visualization:</strong> Tableau (Dashboards, Storytelling), Reporting<br>
+            <strong>Technical Skills:</strong> Python, Pandas, MySQL, Seaborn, NumPy, GitHub, Jupyter Notebook, Colab, HTML, CSS<br>
+            <strong>Office Tools:</strong> MS Office, Photoshop
+        </div>
     </section>
 
     <!-- Projects Section -->
@@ -212,30 +226,18 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-title">Skills</div>
-        <ul>
-            <strong>Data Analysis</strong>: Data Mining, Data Cleaning, Exploratory Data Analysis (EDA)<br>
-            <strong>Data Visualization</strong>: Tableau (Dashboards, Storytelling), Reporting<br>
-            <strong>Technical Skills</strong>: Python, Pandas, MySQL, Seaborn, NumPy, GitHub, Jupyter Notebook, Colab, HTML, CSS<br>
-            <strong>Office Tools</strong>: MS Office, Photoshop
-        </ul>
-    </section>
-
     <!-- Education Section -->
     <section id="education">
         <div class="section-title">Education & Certifications</div>
-        <div class="education-certifications">
-            <strong>Education</strong><br>
+        <div class="content">
+            <p><strong>Education</strong><br>
             M.S. in Data Science, Birchwood University (Graduating December 2024)<br>
-            B.S. in Chemistry, National University (2013)<br><br>
-
-            <strong>Certifications & Professional Development</strong><br>
+            B.S. in Chemistry, National University (2013)</p>
+            <p><strong>Certifications & Professional Development</strong><br>
             CompTIA IT Fundamentals, austinfree.net, Austin, Texas — March 19, 2018<br>
             CompTIA A+ Complete Study Guide (Course & Labs), The Goodwill Academy — May 7, 2018<br>
             Diploma in Computer Science & ICT, SIT Foundation, Bangladesh — December 2010<br>
-            Software Testing and Automation Course, NextTech ITC, Irving, TX — 2021
+            Software Testing and Automation Course, NextTech ITC, Irving, TX — 2021</p>
         </div>
     </section>
 
