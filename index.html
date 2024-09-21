@@ -148,17 +148,18 @@
         @media (max-width: 768px) {
             /* Adjustments for mobile view */
             nav ul {
-                justify-content: space-between; /* Ensure all menu items are spaced evenly */
-                flex-wrap: nowrap; /* Prevent the menu from wrapping */
+                justify-content: space-around; /* Make sure menu items are evenly distributed */
+                flex-wrap: nowrap; /* Ensure no wrapping */
+                overflow: hidden; /* Prevent overflow to the right */
             }
 
             nav ul li {
-                margin: 0 10px; /* Smaller margin for mobile */
+                margin: 0 5px; /* Slightly reduce margin to fit items better */
             }
 
             nav ul li a {
-                font-size: 0.8em; /* Smaller font size for mobile */
-                padding: 5px 10px; /* Reduce padding for mobile */
+                font-size: 0.9em; /* Slightly smaller font size */
+                padding: 5px 8px; /* Reduce padding */
             }
 
             .projects-container {
@@ -167,12 +168,13 @@
             }
 
             .project-box {
-                width: 80%;
+                width: 90%; /* Adjust width for mobile */
             }
 
             section {
                 padding-left: 10px;
                 padding-right: 10px;
+                max-width: 100%; /* Prevent sections from having extra width */
             }
 
             .section-title {
@@ -200,7 +202,7 @@
             }
 
             nav ul li a {
-                font-size: 0.75em; /* Further reduced font size for smaller screens */
+                font-size: 0.75em; /* Further reduced font size */
             }
         }
     </style>
