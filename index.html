@@ -112,13 +112,32 @@
         }
 
         .project-box a {
-            color: #2E8B57;
+            color: white; /* Set text color to white by default */
             text-decoration: none;
             font-weight: bold;
         }
 
-        .project-box a:hover {
-            text-decoration: underline;
+        /* Links styling for project and dashboard */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adds space between the buttons */
+        }
+
+        .project-link, .dashboard-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2E8B57;
+            color: white; /* Make text white by default */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold; /* Makes the text bold */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+        }
+
+        .project-link:hover, .dashboard-link:hover {
+            background-color: #45a049; /* Lighter green on hover */
+            color: #ffffff; /* Keep text white on hover */
         }
 
         /* Contact styles */
@@ -282,17 +301,26 @@
             <div class="project-box">
                 <h3>Domain: Banking</h3>
                 <p>This project focuses on customer demographics, financial transactions, and behavior to uncover patterns and insights. Key tasks included customer segmentation and loan risk analysis.</p>
-                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking">View Project</a>
+                <div class="links">
+                    <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Banking" class="project-link" target="_blank">View Project</a>
+                    <a href="https://public.tableau.com/app/profile/bishowjith.ghosh/viz/UKbankCustomer--01/Dashboard1?publish=yes" class="dashboard-link" target="_blank">View Dashboard</a>
+                </div>
             </div>
             <div class="project-box">
                 <h3>Domain: E-commerce</h3>
                 <p>Analyzed customer purchase behavior, sales trends, and inventory management in an E-commerce setting. Key tasks included sales forecasting and customer retention analysis.</p>
-                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce">View Project</a>
+                <div class="links">
+                    <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_E-commerce" class="project-link" target="_blank">View Project</a>
+                    <a href="https://public.tableau.com/app/profile/bishowjith.ghosh/viz/Tableau_Olist/Dashboard1?publish=yes" class="dashboard-link" target="_blank">View Dashboard</a>
+                </div>
             </div>
             <div class="project-box">
                 <h3>Domain: Retail</h3>
                 <p>Investigated consumer purchasing patterns and stock management in the retail industry. Key tasks included inventory optimization and customer satisfaction analysis.</p>
-                <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail">View Project</a>
+                <div class="links">
+                    <a href="https://github.com/ghoshaustin/My_Projects/tree/main/Domain_Retail" class="project-link" target="_blank">View Project</a>
+                    <a href="https://public.tableau.com/app/profile/bishowjith.ghosh/viz/Project_Retail_Sales_Insights/Dashboard1?publish=ye" class="dashboard-link" target="_blank">View Dashboard</a>
+                </div>
             </div>
         </div>
     </section>
@@ -318,7 +346,7 @@
             If you would like to connect or learn more about my work, feel free to reach out via email, GitHub, or LinkedIn.
         </p>
         <div class="contact-info">
-            <a href="mailto:ghosh.texas@gmail.com">Email Me</a> |
+            <a href="mailto:ghosh.austin@gmail.com">Email Me</a> |
             <a href="https://linkedin.com/in/bishowjith-ghosh-35867227b">LinkedIn</a> |
             <a href="https://github.com/ghoshaustin">GitHub</a>
         </div>
