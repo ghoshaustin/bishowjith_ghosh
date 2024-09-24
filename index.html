@@ -13,7 +13,7 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth; /* For smooth scrolling */
+            scroll-behavior: smooth;
         }
 
         /* Header */
@@ -21,21 +21,21 @@
             text-align: center;
             background-color: #2E8B57;
             color: white;
-            padding: 20px;
+            padding: 10px;
         }
 
         header h1 {
-            font-size: 2.5em; /* Default heading size for Bishowjith Ghosh */
+            font-size: 2.5em;
             margin: 0;
         }
 
         .portfolio-title {
-            font-size: 1.5em; /* Smaller size for Data Analyst Portfolio */
+            font-size: 1.5em;
             margin: 0;
-            white-space: nowrap; /* Ensures that Data Analyst Portfolio stays on one line */
+            white-space: nowrap;
         }
 
-        /* Menu styles (for desktop and larger screens) */
+        /* Menu styles */
         nav {
             background-color: #34495E;
             color: white;
@@ -44,6 +44,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            margin-bottom: -30px; 
+           
         }
 
         nav ul {
@@ -55,7 +57,7 @@
         }
 
         nav ul li {
-            margin: 0 15px; /* Default margin for desktop view */
+            margin: 0 15px;
         }
 
         nav ul li a {
@@ -69,7 +71,6 @@
 
         nav ul li a:hover {
             background-color: #2E8B57;
-            color: white;
             border-radius: 4px;
         }
 
@@ -112,7 +113,7 @@
         }
 
         .project-box a {
-            color: white; /* Set text color to white by default */
+            color: white;
             text-decoration: none;
             font-weight: bold;
         }
@@ -121,23 +122,64 @@
         .links {
             display: flex;
             justify-content: center;
-            gap: 10px; /* Adds space between the buttons */
+            gap: 10px;
         }
 
         .project-link, .dashboard-link {
             display: inline-block;
             padding: 10px 20px;
             background-color: #2E8B57;
-            color: white; /* Make text white by default */
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold; /* Makes the text bold */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .project-link:hover, .dashboard-link:hover {
-            background-color: #45a049; /* Lighter green on hover */
-            color: #ffffff; /* Keep text white on hover */
+            background-color: #45a049;
+        }
+
+        /* Resume button */
+        .resume-button {
+            display: inline-block;
+            padding: 1px 2px;
+            background-color: #2E8B57;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 1px;
+            transition: background-color 0.3s ease;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+       /* Adjust the paragraph margin */
+         #profile p {
+            margin-bottom: -40px; /* Reduce the space between the paragraph and the button */
+                          
+      }
+      * Adjust margin for Skills and Projects */
+         #skills {
+            margin-bottom: -40px; /* Reduce space between Skills and Projects */
+                  }
+
+       /* Adjust margin for My Projects and Education */
+         #projects {
+           margin-top: -50px;
+           margin-bottom: -40px; /* Reduce space between Projects and Education */
+                    }
+
+       /* Adjust margin for Education and Contact */
+          #education {
+            margin-bottom: -10px; /* Reduce space between Education and Contact */
+                      }
+      /* Adjust margin for Contact section */
+           #contact {
+           margin-top: -35px; /* Reduce the space before Contact section */
+           margin-bottom: -35px;  
+      }
+
+        .resume-button:hover {
+            background-color: #228B22;
         }
 
         /* Contact styles */
@@ -165,20 +207,18 @@
 
         /* Media queries for responsiveness */
         @media (max-width: 768px) {
-            /* Adjustments for mobile view */
             nav ul {
-                justify-content: center; /* Center items for mobile */
-                flex-wrap: nowrap; /* Ensure no wrapping */
-                overflow: hidden; /* Prevent overflow to the right */
+                justify-content: center;
+                overflow: hidden;
             }
 
             nav ul li {
-                margin: 0px; /* Set margin to 0px between menu items */
+                margin: 0px;
             }
 
             nav ul li a {
-                font-size: 0.8em; /* Slightly smaller font size for mobile */
-                padding: 4px 8px; /* Slightly reduced padding for mobile */
+                font-size: 0.8em;
+                padding: 4px 8px;
             }
 
             .projects-container {
@@ -187,13 +227,13 @@
             }
 
             .project-box {
-                width: 90%; /* Adjust width for mobile */
+                width: 90%;
             }
 
             section {
                 padding-left: 10px;
                 padding-right: 10px;
-                max-width: 100%; /* Prevent sections from having extra width */
+                max-width: 100%;
             }
 
             .section-title {
@@ -210,78 +250,53 @@
         }
 
         @media (max-width: 480px) {
-            /* Further adjustments for smaller mobile devices */
             header h1 {
-                font-size: 2em; /* Slightly smaller heading size */
+                font-size: 2em;
             }
 
             .portfolio-title {
-                font-size: 1.2em; /* Reduced size for Data Analyst Portfolio */
-                white-space: nowrap; /* Ensure it stays in one line */
+                font-size: 1.2em;
             }
 
             nav ul li a {
-                font-size: 0.75em; /* Further reduced font size */
+                font-size: 0.75em;
             }
         }
     </style>
-    <script>
-        // Scroll Fix for Mobile Menu (applies only to mobile)
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll('nav ul li a');
-            const isMobile = window.innerWidth <= 768; // Detect if it's a mobile device
-            
-            if (isMobile) {
-                const offset = 70; // Adjust this value for how much offset you want (height of the menu)
-                
-                links.forEach(link => {
-                    link.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-                        const scrollPosition = targetElement.offsetTop - offset;
-
-                        window.scrollTo({
-                            top: scrollPosition,
-                            behavior: 'smooth'
-                        });
-                    });
-                });
-            }
-        });
-    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <h1>Bishowjith Ghosh</h1>
-        <h2 class="portfolio-title">Data Analyst - Portfolio</h2> <!-- Adjusted size for mobile -->
+        <h2 class="portfolio-title">Data Analyst - Portfolio</h2>
     </header>
 
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#profile">Profile</a></li> <!-- Changed "About Me" to "Profile" -->
-            <li><a href="#skills">Skills</a></li> <!-- Skills comes after Profile -->
-            <li><a href="#projects">Projects</a></li> <!-- Projects after Skills -->
-            <li><a href="#education">Education</a></li> <!-- Education after Projects -->
-            <li><a href="#contact">Contact</a></li> <!-- Contact last -->
+            <li><a href="#profile">Profile   </a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Profile Section -->
-    <section id="profile"> <!-- Changed the ID from "about" to "profile" -->
-        <div class="section-title">Profile</div> <!-- Changed the title to "Profile" -->
+    <section id="profile">
+        <div class="section-title">Profile</div>
         <p>
             Hello! I'm Bishowjith Ghosh, a dedicated Data Analyst with a strong foundation in data analysis, 
             visualization, and process optimization. I am passionate about turning raw data into actionable 
             insights that drive business growth. I have worked across multiple domains, including Banking, 
             E-commerce, and Retail, and am continuously expanding my expertise in Python, Tableau, MySQL, 
-            & ML. Currently pursuing a Master of Science in Data Science, with expected graduation in 
-            December 2024.
-        </p>
-    </section>
-
+            & ML. Currently pursuing a Master of Science in Data Science, with expected graduation in December 2024.
+      <!-- Resume download button -->
+        <a href="Resume/Data_Analyst-resume-bishowjith_ghosh.pdf" class="resume-button" download>Download Resume</a>
+    </section
+      
+      </p>
+      
     <!-- Skills Section -->
     <section id="skills">
         <div class="section-title">Skills</div>
